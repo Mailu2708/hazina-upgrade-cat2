@@ -561,3 +561,67 @@ footer {
     color:white;
 
 }
+
+/* Interactive Flyer  */
+
+.flyer-container img{
+
+    cursor:pointer;
+
+    transition:transform .3s ease;
+
+}
+
+.flyer-container img:hover{
+
+    transform:scale(1.05);
+
+}
+
+.flyer-message{
+
+    margin-top:20px;
+
+    max-width:650px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    background:#f8f9fa;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    display:none;
+
+}
+
+.flyer-message.show{
+
+    display:block;
+
+    animation:fadeIn .4s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}

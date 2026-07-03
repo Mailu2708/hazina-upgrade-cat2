@@ -259,3 +259,16 @@ if(storedParent){
     Reliable & Safe School Transport for Your Peace of Mind`;
 
 }
+
+// Interactive Flyer
+
+
+const flyerImage = document.getElementById("flyerImage");
+
+const flyerMessage = document.getElementById("flyerMessage");
+
+flyerImage.addEventListener("click", function(){
+
+    flyerMessage.classList.toggle("show");
+
+});
