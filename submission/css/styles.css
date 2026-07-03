@@ -31,9 +31,7 @@ h1, h2, h3 {
     font-weight: 400;
 }
 
-/* ==========================================
-   1. HEADER & NAVIGATION STYLING
-   ========================================== */
+/*  1. HEADER & NAVIGATION STYLING */
 .site-header {
     background-color: var(--creamish-bg);
     border-bottom: 3px solid var(--main-blue);
@@ -88,9 +86,7 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
-/* ==========================================
-   2. HERO SECTION
-   ========================================== */
+/*  2. HERO SECTION */
 .hero-section {
     display: flex;
     align-items: center;
@@ -149,9 +145,7 @@ h1, h2, h3 {
     border-radius: 6px;
 }
 
-/* ==========================================
-   3. MAIN CONTENT & SECTIONS
-   ========================================== */
+/* 3. MAIN CONTENT & SECTIONS */
 main {
     max-width: 1200px;
     margin: 2.5rem auto;
@@ -214,9 +208,7 @@ li {
     margin-bottom: 0.6rem;
 }
 
-/* ==========================================
-   4. SCHOOLS GRID LAYOUT
-   ========================================== */
+/* 4. SCHOOLS GRID LAYOUT */
 .schools-grid {
     display: flex;
     justify-content: center;
@@ -235,9 +227,7 @@ li {
     color: var(--main-blue);
 }
 
-/* ==========================================
-   5. TWO-COLUMN PACKAGES SECTION (Explicit CSS Grid Track)
-   ========================================== */
+/*  5. TWO-COLUMN PACKAGES SECTION (Explicit CSS Grid Track) */
 .packages-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates two equal columns side-by-side */
@@ -299,9 +289,7 @@ li {
     font-size: 1.05rem;
 }
 
-/* ==========================================
-   6. FLYER & MEDIA STYLING
-   ========================================== */
+/* 6. FLYER & MEDIA STYLING */
 .flyer-container img {
     display: block;
     max-width: 100%;
@@ -310,9 +298,7 @@ li {
     margin: 1.5rem auto 0 auto;
 }
 
-/* ==========================================
-   7. CONTACT STYLING
-   ========================================== */
+/*  7. CONTACT STYLING */
 .contact-methods {
     display: flex;
     justify-content: center;
@@ -334,9 +320,7 @@ li {
     border-bottom-color: var(--hover-purple);
 }
 
-/* ==========================================
-   8. FOOTER STYLING
-   ========================================== */
+/*  8. FOOTER STYLING */
 footer {
     background-color: var(--creamish-bg);
     color: var(--main-blue);
@@ -347,9 +331,7 @@ footer {
     margin-top: 4rem;
 }
 
-/* ==========================================
-   9. RESPONSIVE MEDIA QUERIES
-   ========================================== */
+/*  9. RESPONSIVE MEDIA QUERIES */
 @media (max-width: 900px) {
     .about-grid,
     .hero-section,
@@ -377,4 +359,21 @@ footer {
     .hero-image img {
         width: 100%;
     }
+}
+
+// Dynamic Package Animation
+
+
+.package-card {
+
+    transition: all 0.3s ease;
+
+}
+
+.package-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+
 }
