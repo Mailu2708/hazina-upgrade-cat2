@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --main-blue: #0000cc;       
+    --hover-purple: #660099;    
+    --hover-pink: #ff007f;      
+    --creamish-bg: #73cbd4;    
+    --body-bg: #f7eba6;         
+    --heading-line: #000b2b;    
+    --sub-line: #73cbd4;        
+}
+
+/* Global Structural Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair Display', Georgia, serif;
+    background-color: var(--body-bg);
+    color: #222222;
+    line-height: 1.8;
+    font-size: 1rem; 
+}
+
+/* Base Headings - Ensures all section headers render in cursive */
+h1, h2, h3 {
+    font-family: 'Great Vibes', cursive, serif;
+    font-weight: 400;
+}
+
+/* ==========================================
+   1. HEADER & NAVIGATION STYLING
+   ========================================== */
+.site-header {
+    background-color: var(--creamish-bg);
+    border-bottom: 3px solid var(--main-blue);
+    text-align: center;
+    padding: 3rem 1.5rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.site-header h1 {
+    color: var(--main-blue);
+    font-size: 4.5rem; 
+    margin-bottom: 0.2rem; 
+}
+
+/* Flexbox Navigation */
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+
+/* Bordered Interactive Navigation Anchors */
+.main-nav a {
+    font-family: 'Playfair Display', Georgia, serif; /* Keeps links highly readable */
+    color: var(--main-blue);
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+    border: 2px solid var(--main-blue); 
+    border-radius: 6px;                 
+    padding: 0.5rem 1rem;               
+    
+    /* Transition for hover effects */
+    transition: all 0.3s ease-in-out;    
+}
+
+.main-nav a:hover {
+    color: #ffffff;                     
+    background-color: var(--hover-purple); 
+    border-color: var(--hover-purple);     
+}
+
+/* Highlighted Nav Button styling for Book a Seat */
+.main-nav .cta-nav {
+    background-color: var(--main-blue);
+    color: #ffffff;
+}
+
+/* ==========================================
+   2. HERO SECTION
+   ========================================== */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--creamish-bg);
+    padding: 2.5rem;
+    margin-bottom: 1.8rem;
+    border: 1px solid #e8e4cf;
+    border-left: 8px solid var(--main-blue);
+    border-radius: 0 12px 12px 0;
+    gap: 2rem;
+    transition: border-left-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hero-section:hover {
+    border-left-color: var(--hover-pink);
+    box-shadow: 0 6px 18px rgba(255, 0, 127, 0.08);
+}
+
+.hero-content h2 {
+    color: var(--main-blue);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-style: italic;
+    color: #444444;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    font-family: 'Playfair Display', Georgia, serif;
+    display: inline-block;
+    color: var(--main-blue);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid var(--main-blue);
+    border-radius: 6px;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: var(--hover-purple);
+    border-color: var(--hover-purple);
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* ==========================================
+   3. MAIN CONTENT & SECTIONS
+   ========================================== */
+main {
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.container {
+    background-color: var(--creamish-bg);
+    padding: 2rem;             
+    margin-bottom: 1.8rem;       
+    
+    border: 1px solid #e8e4cf; 
+    border-left: 8px solid var(--main-blue); 
+    border-radius: 0 12px 12px 0;            
+    
+    /* Transition animation */ 
+    transition: border-left-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Left border transforms into pink when parent section is hovered */
+.container:hover {
+    border-left-color: var(--hover-pink);
+    box-shadow: 0 6px 18px rgba(255, 0, 127, 0.08);
+}
+
+.container h2 {
+    color: var(--main-blue);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid var(--heading-line);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.about-grid {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.zones-card h3 {
+    font-size: 2.3rem;
+    color: var(--main-blue);
+    border-bottom: 2px solid var(--sub-line);
+    margin-bottom: 0.5rem;
+}
+
+ul.styled-list, .about-text ul {
+    list-style-position: inside;
+    margin-top: 0.5rem;
+}
+
+li {
+    margin-bottom: 0.6rem;
+}
+
+/* ==========================================
+   4. SCHOOLS GRID LAYOUT
+   ========================================== */
+.schools-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.school-card {
+    font-family: 'Playfair Display', Georgia, serif;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--main-blue);
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--main-blue);
+}
+
+/* ==========================================
+   5. TWO-COLUMN PACKAGES SECTION (Explicit CSS Grid Track)
+   ========================================== */
+.packages-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal columns side-by-side */
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.package-column {
+    /* No explicit sizing needed, CSS Grid handles layout width perfectly */
+}
+
+.package-card {
+    background-color: rgba(255, 255, 255, 0.15); 
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e8e4cf;
+    height: 100%;
+}
+
+.package-card h3 {
+    font-family: 'Playfair Display', Georgia, serif; /* Keeps package titles clear and legible */
+    font-size: 1.4rem;
+    color: var(--main-blue);
+    font-weight: bold;
+    border-bottom: 2px solid var(--body-bg); 
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-card.featured {
+    border: 2px solid var(--main-blue);
+    position: relative;
+}
+
+.badge {
+    font-family: 'Playfair Display', Georgia, serif;
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background-color: var(--main-blue);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.price-info {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--heading-line);
+    margin-bottom: 0.8rem;
+}
+
+.package-card p:not(.price-info) {
+    font-style: italic;
+    color: #444444;
+    font-size: 1.05rem;
+}
+
+/* ==========================================
+   6. FLYER & MEDIA STYLING
+   ========================================== */
+.flyer-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1.5rem auto 0 auto;
+}
+
+/* ==========================================
+   7. CONTACT STYLING
+   ========================================== */
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contact-methods a {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--main-blue);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dashed var(--main-blue);
+    transition: all 0.3s ease;
+}
+
+.contact-methods a:hover {
+    color: var(--hover-purple);
+    border-bottom-color: var(--hover-purple);
+}
+
+/* ==========================================
+   8. FOOTER STYLING
+   ========================================== */
+footer {
+    background-color: var(--creamish-bg);
+    color: var(--main-blue);
+    border-top: 2px solid #e8e4cf;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+    margin-top: 4rem;
+}
+
+/* ==========================================
+   9. RESPONSIVE MEDIA QUERIES
+   ========================================== */
+@media (max-width: 900px) {
+    .about-grid,
+    .hero-section,
+    .contact-methods {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Collapse the explicit CSS grid columns back into a single vertical row */
+    .packages-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .site-header h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-image img {
+        width: 100%;
+    }
+}
