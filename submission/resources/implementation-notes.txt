@@ -1,0 +1,74 @@
+HAZINA TRANSPORT SERVICES
+JavaScript Implementation Summary
+
+This project enhances the Hazina Transport Services website using JavaScript to 
+make the website interactive and improve the user experience.
+
+1. Dynamic Package Rendering
+An array of transport package objects was created in JavaScript.
+Using the forEach() loop, each package is displayed dynamically on the webpage
+ instead of being hard-coded in HTML. DOM methods such as createElement() and 
+ appendChild() were used to generate and display the package cards.
+
+Example:
+The website automatically displays the 1-Way, 2-Way, Weekly, and Monthly transport packages.
+
+2. Schools of Interest
+Users can type the name of a school they are interested in and add it to a list.
+ JavaScript creates each list item dynamically and also creates a Remove button 
+ that allows users to delete schools from the list.
+
+Example:
+A parent enters "Kianda School" and clicks "Add School".
+ The school appears in the list and can later be removed by clicking the Remove button.
+
+3. Booking Form Validation
+JavaScript validates the booking form before submission using the submit event 
+and preventDefault(). The program checks that all required fields are completed 
+and verifies that the email address is correctly formatted. Appropriate success 
+or error messages are displayed without refreshing the page.
+
+Example:
+If the email address is invalid, the user receives an error message requesting 
+a valid email. If all fields are correct, a booking confirmation message is displayed.
+
+4. Local Storage and Theme Toggle
+The project uses localStorage to remember the parent's name after a successful
+ booking and to save the user's preferred website theme (Light or Dark Mode). 
+ When the user revisits the website, their preferred theme is automatically restored 
+ and a personalized welcome message is displayed.
+
+Example:
+After booking as "Mailu", the website displays "Welcome back, Mailu!" on future visits.
+
+5. Interactive Flyer
+The company flyer was made interactive using JavaScript. 
+When the flyer image is clicked, additional information about Hazina
+ Transport Services is displayed. Clicking the flyer again hides the 
+ information using classList.toggle().
+
+Example:
+Users can click the company flyer to view safety information, 
+GPS monitoring details, and transport service highlights.
+
+JavaScript Concepts Used
+
+• Variables and Constants
+• Arrays and Objects
+• Loops (forEach)
+• Functions
+• Event Listeners
+• DOM Manipulation
+• createElement()
+• appendChild()
+• remove()
+• classList.toggle()
+• Form Validation
+• Regular Expressions (Email Validation)
+• localStorage
+• Conditional Statements (if/else)
+• Template Literals
+
+These concepts were used to transform the original static website into
+ a more interactive and user-friendly web application while maintaining
+  the original design of the Hazina Transport Services website.
