@@ -377,3 +377,63 @@ footer {
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 
 }
+/* Interested Schools Section */
+
+#schoolInput{
+    padding:12px;
+    width:300px;
+    max-width:80%;
+    border:2px solid #ccc;
+    border-radius:8px;
+    margin-right:10px;
+}
+
+#schoolList{
+    margin-top:25px;
+    list-style:none;
+    padding:0;
+}
+
+.school-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    max-width:500px;
+
+    margin:12px auto;
+
+    background:white;
+
+    padding:15px 20px;
+
+    border-radius:10px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+
+}
+
+.remove-btn{
+
+    background:#d62828;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+.remove-btn:hover{
+
+    background:#a61b1b;
+
+}

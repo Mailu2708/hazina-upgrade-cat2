@@ -69,3 +69,62 @@ transportPackages.forEach(function (pkg) {
     packagesContainer.appendChild(card);
 
 });
+
+// Schools of Interest
+
+
+const schoolInput = document.getElementById("schoolInput");
+
+const addSchoolBtn = document.getElementById("addSchoolBtn");
+
+const schoolList = document.getElementById("schoolList");
+
+addSchoolBtn.addEventListener("click", function(){
+
+    const schoolName = schoolInput.value.trim();
+
+    if(schoolName === ""){
+
+        alert("Please enter a school name.");
+
+        return;
+
+    }
+
+    // Create list item
+
+    const listItem = document.createElement("li");
+
+    listItem.classList.add("school-item");
+
+    // School name
+
+    const schoolText = document.createElement("span");
+
+    schoolText.textContent = schoolName;
+
+    // Remove button
+
+    const removeBtn = document.createElement("button");
+
+    removeBtn.textContent = "Remove";
+
+    removeBtn.classList.add("remove-btn");
+
+    removeBtn.addEventListener("click", function(){
+
+        listItem.remove();
+
+    });
+
+    listItem.appendChild(schoolText);
+
+    listItem.appendChild(removeBtn);
+
+    schoolList.appendChild(listItem);
+
+    schoolInput.value="";
+
+    schoolInput.focus();
+
+});
