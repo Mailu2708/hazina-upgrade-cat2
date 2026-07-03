@@ -128,3 +128,78 @@ addSchoolBtn.addEventListener("click", function(){
     schoolInput.focus();
 
 });
+
+// Booking Form Validation
+
+const bookingForm = document.getElementById("bookingForm");
+
+const formMessage = document.getElementById("formMessage");
+
+bookingForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const parentName =
+        document.getElementById("parentName").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const childSchool =
+        document.getElementById("childSchool").value.trim();
+
+    const selectedPackage =
+        document.getElementById("package").value;
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(
+        parentName === "" ||
+        email === "" ||
+        childSchool === "" ||
+        selectedPackage === ""
+    ){
+
+        formMessage.className = "error-message";
+
+        formMessage.textContent =
+            "Please complete all required fields.";
+
+        return;
+
+    }
+
+    if(!emailPattern.test(email)){
+
+        formMessage.className = "error-message";
+
+        formMessage.textContent =
+            "Please enter a valid email address.";
+
+        return;
+
+    }
+
+    // Save parent's name for Task 4
+
+    localStorage.setItem(
+        "parentName",
+        parentName
+    );
+
+    formMessage.className = "success-message";
+
+    formMessage.innerHTML =
+
+        `✅ Thank you, <strong>${parentName}</strong>!
+
+        <br><br>
+
+        Your booking request has been received successfully.
+
+        We will contact you shortly.`;
+
+    bookingForm.reset();
+
+});
